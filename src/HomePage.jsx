@@ -404,21 +404,6 @@ export default function HomePage() {
     <>
       <style>{css}</style>
 
-      {/* NAV */}
-      <nav className="nav">
-        <a href="#" className="nav-logo">
-          <UterusNav />
-          OVIE
-        </a>
-        <ul className="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#how">How it Works</a></li>
-          <li><span className="nav-sep">|</span></li>
-          <li><a href="#" className="nav-register">Register</a></li>
-          <li><a href="#">Log In</a></li>
-        </ul>
-      </nav>
-
       {/* HERO */}
       <section className="hero">
         <div className="hero-left">
@@ -428,8 +413,8 @@ export default function HomePage() {
             Keep your data private and choose who you share with. Keep track of your daily contraceptives and track your cycle.
           </p>
           <div className="hero-btns">
-            <button className="btn-make">Make account</button>
-            <button className="btn-learn">Learn more</button>
+            <button className="btn-make" onClick={() => onNavigate("register")}>Make account</button>
+            <button className="btn-learn" onClick={() => onNavigate("how")}>Learn more</button>
           </div>
         </div>
         <div className="hero-right">
@@ -568,9 +553,9 @@ export default function HomePage() {
       {/* CTA */}
       <section className="cta">
         <h2>Sync on your terms</h2>
-        <button className="btn-cta">
-          Create Account <ArrowRight />
-        </button>
+          <button className="btn-cta" onClick={() => onNavigate("register")}>
+            Create Account <ArrowRight />
+          </button>
       </section>
 
       {/* FOOTER */}
